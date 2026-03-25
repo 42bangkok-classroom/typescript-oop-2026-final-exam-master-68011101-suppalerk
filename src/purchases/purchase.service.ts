@@ -10,9 +10,4 @@ export class PurchaseService {
     const rawData = fs.readFileSync(this.fileName, 'utf8');
     return JSON.parse(rawData) as Purchase[];
   }
-  findOne(id: string): void {
-    const users = this.findAll();
-
-    const user = users.find((u: Purchase) => u.id === u.id);
-  }
 }
