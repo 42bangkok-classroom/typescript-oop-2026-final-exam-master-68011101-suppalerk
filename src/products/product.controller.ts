@@ -4,11 +4,10 @@ import { Product } from './product.interface';
 
 @Controller('products')
 export class ProductController {
-constructor(private readonly productService: ProductService) {}
+  constructor(private readonly productService: ProductService) {}
 
-
-@Get()
-findAll(): Product[] {
-return this.productService.findAll();
-}
+  @Get()
+  findAll(): Product[] {
+    return this.productService.findAll();
+  }
 }
